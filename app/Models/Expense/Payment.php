@@ -7,13 +7,15 @@ use App\Traits\Currencies;
 use App\Traits\DateTime;
 use Bkwld\Cloner\Cloneable;
 use Sofa\Eloquence\Eloquence;
-use Plank\Mediable\Mediable;
+use App\Traits\Media;
 
 class Payment extends Model
 {
-    use Cloneable, Currencies, DateTime, Eloquence, Mediable;
+    use Cloneable, Currencies, DateTime, Eloquence, Media;
 
     protected $table = 'payments';
+
+    protected $dates = ['deleted_at', 'paid_at'];
 
     /**
      * Attributes that should be mass-assignable.

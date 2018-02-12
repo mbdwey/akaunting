@@ -7,11 +7,11 @@ use App\Traits\Currencies;
 use App\Traits\DateTime;
 use Bkwld\Cloner\Cloneable;
 use Sofa\Eloquence\Eloquence;
-use Plank\Mediable\Mediable;
+use App\Traits\Media;
 
 class Bill extends Model
 {
-    use Cloneable, Currencies, DateTime, Eloquence, Mediable;
+    use Cloneable, Currencies, DateTime, Eloquence, Media;
 
     protected $table = 'bills';
 
@@ -29,7 +29,7 @@ class Bill extends Model
      *
      * @var array
      */
-    public $sortable = ['bill_number', 'vendor_name', 'amount', 'status.name', 'billed_at', 'due_at'];
+    public $sortable = ['bill_number', 'vendor_name', 'amount', 'status.name', 'billed_at', 'due_at', 'bill_status_code'];
 
     /**
      * Searchable rules.
