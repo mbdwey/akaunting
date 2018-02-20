@@ -218,14 +218,14 @@
                 company_logo_html += '        </span>';
                 company_logo_html += '    </a>';
                 company_logo_html += '    {!! Form::open(['id' => 'company_logo-' . $setting['company_logo']->id, 'method' => 'DELETE', 'url' => [url('uploads/' . $setting['company_logo']->id)], 'style' => 'display:inline']) !!}';
-                company_logo_html += '    <a id="remove-company_logo" href="javascript:void();">';
+                company_logo_html += '    <a id="remove-company_logo" href="javascript:void(0);">';
                 company_logo_html += '        <span class="text-danger"><i class="fa fa fa-times"></i></span>';
                 company_logo_html += '    </a>';
                 company_logo_html += '    {!! Form::close() !!}';
                 company_logo_html += '</span>';
-    
+
                 $('#company .fancy-file .fake-file').append(company_logo_html);
-    
+
                 $(document).on('click', '#remove-company_logo', function (e) {
                     confirmDelete("#company_logo-{!! $setting['company_logo']->id !!}", "{!! trans('general.attachment') !!}", "{!! trans('general.delete_confirm', ['name' => '<strong>' . $setting['company_logo']->basename . '</strong>', 'type' => strtolower(trans('general.attachment'))]) !!}", "{!! trans('general.cancel') !!}", "{!! trans('general.delete')  !!}");
                 });
@@ -249,7 +249,7 @@
                 invoice_logo_html += '        </span>';
                 invoice_logo_html += '    </a>';
                 invoice_logo_html += '    {!! Form::open(['id' => 'invoice_logo-' . $setting['invoice_logo']->id, 'method' => 'DELETE', 'url' => [url('uploads/' . $setting['invoice_logo']->id)], 'style' => 'display:inline']) !!}';
-                invoice_logo_html += '    <a id="remove-invoice_logo" href="javascript:void();">';
+                invoice_logo_html += '    <a id="remove-invoice_logo" href="javascript:void(0);">';
                 invoice_logo_html += '        <span class="text-danger"><i class="fa fa fa-times"></i></span>';
                 invoice_logo_html += '    </a>';
                 invoice_logo_html += '    {!! Form::close() !!}';

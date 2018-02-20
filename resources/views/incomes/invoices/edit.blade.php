@@ -218,7 +218,7 @@
                 attachment_html += '        </span>';
                 attachment_html += '    </a>';
                 attachment_html += '    {!! Form::open(['id' => 'attachment-' . $invoice->attachment->id, 'method' => 'DELETE', 'url' => [url('uploads/' . $invoice->attachment->id)], 'style' => 'display:inline']) !!}';
-                attachment_html += '    <a id="remove-attachment" href="javascript:void();">';
+                attachment_html += '    <a id="remove-attachment" href="javascript:void(0);">';
                 attachment_html += '        <span class="text-danger"><i class="fa fa fa-times"></i></span>';
                 attachment_html += '    </a>';
                 attachment_html += '    {!! Form::close() !!}';

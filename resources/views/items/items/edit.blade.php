@@ -85,14 +85,14 @@
                 picture_html += '        </span>';
                 picture_html += '    </a>';
                 picture_html += '    {!! Form::open(['id' => 'picture-' . $item->picture->id, 'method' => 'DELETE', 'url' => [url('uploads/' . $item->picture->id)], 'style' => 'display:inline']) !!}';
-                picture_html += '    <a id="remove-picture" href="javascript:void();">';
+                picture_html += '    <a id="remove-picture" href="javascript:void(0);">';
                 picture_html += '        <span class="text-danger"><i class="fa fa fa-times"></i></span>';
                 picture_html += '    </a>';
                 picture_html += '    {!! Form::close() !!}';
                 picture_html += '</span>';
-    
+
                 $('.fancy-file .fake-file').append(picture_html);
-    
+
                 $(document).on('click', '#remove-picture', function (e) {
                     confirmDelete("#picture-{!! $item->picture->id !!}", "{!! trans('general.attachment') !!}", "{!! trans('general.delete_confirm', ['name' => '<strong>' . $item->picture->basename . '</strong>', 'type' => strtolower(trans('general.attachment'))]) !!}", "{!! trans('general.cancel') !!}", "{!! trans('general.delete')  !!}");
                 });

@@ -77,7 +77,7 @@
                 picture_html += '        </span>';
                 picture_html += '    </a>';
                 picture_html += '    {!! Form::open(['id' => 'picture-' . $user->picture->id, 'method' => 'DELETE', 'url' => [url('uploads/' . $user->picture->id)], 'style' => 'display:inline']) !!}';
-                picture_html += '    <a id="remove-picture" href="javascript:void();">';
+                picture_html += '    <a id="remove-picture" href="javascript:void(0);">';
                 picture_html += '        <span class="text-danger"><i class="fa fa fa-times"></i></span>';
                 picture_html += '    </a>';
                 picture_html += '    {!! Form::close() !!}';
