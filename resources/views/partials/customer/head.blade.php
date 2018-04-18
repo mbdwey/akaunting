@@ -21,6 +21,13 @@
         <link rel="stylesheet" href="{{ asset('vendor/almasaeed2010/adminlte/dist/css/skins/skin-black.min.css') }}">
         <link rel="stylesheet" href="{{ asset('public/css/skin-black.css?v=1.0') }}">
     @endif
+
+    <link rel="stylesheet" href="{{ asset('extra/AdminLTE-2.3.5-RTL/bootstrap/css/bootstrap-rtl.min.css') }}">
+<link rel="stylesheet" href="{{ asset('extra/AdminLTE.RTL/AdminLTE.rtl.min.css')}}" />
+<link rel="stylesheet" href="{{ asset('extra/AdminLTE-2.3.5-RTL/dist/css/AdminLTE-rtl.min.css') }}">
+<link rel="stylesheet" href="{{ asset('extra/AdminLTE-2.3.5-RTL/dist/css/skins/skin-green-light-rtl.min.css') }}">
+
+
     <!-- Data Tables -->
     <link rel="stylesheet" href="{{ asset('vendor/almasaeed2010/adminlte/plugins/datatables/dataTables.bootstrap.css') }}">
     <!-- Select2 -->
@@ -28,7 +35,7 @@
     <!-- App style -->
     <link rel="stylesheet" href="{{ asset('public/css/app.css?v=1.0') }}">
     <link rel="stylesheet" href="{{ asset('public/css/akaunting-green.css?v=1.0') }}">
-    
+
     <link rel="shortcut icon" href="{{ asset('public/img/favicon.ico') }}">
 
     @stack('css')
